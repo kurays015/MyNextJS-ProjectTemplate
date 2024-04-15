@@ -8,7 +8,12 @@ export default async function Home() {
       <h1 className="text-2xl text-center">
         My NextJS | TypeScript | Next-Auth | Shadcn-ui Template (with darkmode)!
       </h1>
-      <div>Users from DB: {users.map(user => user.email).join(", ")}</div>
+      <div>
+        Users from DB:{" "}
+        {users
+          .map((user, index) => <h5 key={index}>{user.email}</h5>)
+          .join(", ")}
+      </div>
     </main>
   );
 }
