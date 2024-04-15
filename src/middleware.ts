@@ -4,7 +4,7 @@ import {
   apiAuthPrefix,
   authRoutes,
   publicRoutes,
-} from "../routes";
+} from "./routes";
 
 export default function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
